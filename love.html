@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f3f3f3;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #f0c14b;
+            color: #333;
+        }
+
+        .btn:hover {
+            background-color: #e7b03a;
+        }
+
+        #noBtn {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>hi Nevin sir,</h1>
+        <img src=WhatsApp Image 2024-08-28 at 22.11.19_4c593a7d.jpg alt="Heart" onerror="src='WhatsApp Image 2024-08-28 at 22.11.19_4c593a7d.jpg'">
+        <p class="question">Sir, oru 1000 rupa gpay cheyyavo??</p>
+        <div class="buttons">
+            <button class="btn" id="yesBtn">Yes</button>
+            <button class="btn" id="noBtn">No</button>
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('noBtn');
+
+        noBtn.addEventListener('mouseover', function() {
+            const x = Math.random() * (window.innerWidth - this.offsetWidth);
+            const y = Math.random() * (window.innerHeight - this.offsetHeight);
+
+            this.style.left = `${x}px`;
+            this.style.top = `${y}px`;
+            this.style.position = 'absolute';
+        });
+
+        document.getElementById('yesBtn').addEventListener('click', function() {
+            alert('I knew it!');
+        });
+    </script>
+
+</body>
+</html>
