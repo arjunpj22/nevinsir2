@@ -6,59 +6,95 @@
     <title>Love Website</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f3f3f3;
             margin: 0;
-            text-align: center;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #555;
         }
 
         .container {
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 350px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
         }
 
         h1 {
+            font-size: 28px;
             color: #333;
+            margin-bottom: 20px;
         }
 
         img {
-            width: 100px;
+            width: 120px;
             height: auto;
             margin-bottom: 20px;
+            animation: heartBeat 1.5s infinite;
         }
 
         .question {
-            font-size: 18px;
-            margin-bottom: 20px;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #777;
         }
 
         .buttons {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .btn {
-            padding: 10px 20px;
+            padding: 12px 25px;
             font-size: 16px;
             border: none;
-            border-radius: 5px;
+            border-radius: 50px;
             cursor: pointer;
-            background-color: #f0c14b;
-            color: #333;
+            transition: background-color 0.3s, transform 0.3s;
+            background-color: #ff6f61;
+            color: #fff;
         }
 
         .btn:hover {
-            background-color: #e7b03a;
+            background-color: #ff4f41;
+            transform: translateY(-3px);
         }
 
         #noBtn {
             position: relative;
+            background-color: #f0c14b;
+            color: #333;
+        }
+
+        #noBtn:hover {
+            background-color: #e7b03a;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes heartBeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
     </style>
 </head>
@@ -66,7 +102,7 @@
 
     <div class="container">
         <h1>Hi Nevin Sir,</h1>
-        <img src=WhatsApp Image 2024-08-28 at 23.55.05_a93f5bfc-Photoroom.png"" alt="Heart" onerror="src='WhatsApp Image 2024-08-28 at 23.55.05_a93f5bfc-Photoroom.png'">
+        <img src="WhatsApp Image 2024-08-28 at 23.55.05_a93f5bfc-Photoroom.png" alt="Heart">
         <p class="question">Sir, oru 1000 rupa gpay cheyyavo??</p>
         <div class="buttons">
             <button class="btn" id="yesBtn">Yes</button>
@@ -87,11 +123,9 @@
         });
 
         document.getElementById('yesBtn').addEventListener('click', function() {
-            // Replace this URL with the Google Pay URL or intent
             window.location.href = "https://pay.google.com/gp/w/u/0/home"; 
         });
     </script>
 
 </body>
 </html>
-    
